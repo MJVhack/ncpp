@@ -19,6 +19,12 @@ Nint:
 
 Pour Nint, les fonctions actuelles sont :
 std::string GetValue()
-void SetValue()
+void SetValue(std::string Nvalue)
+size_t GetSize()
+Etype GetType()
+
+Pour Nstr:
+std::string GetData()
+void SetData(std::string Ndata)
 size_t GetSize()
 Etype GetType()
