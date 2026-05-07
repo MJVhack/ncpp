@@ -23,10 +23,15 @@ namespace ncpp
         Etype GetType();
         size_t GetSize();
 
+        // Setdata & co
         void SetData(std::string Ndata);
+        void SetData(Nstr Ndata);
 
+        // FindAndReplace And ALLLL
         void FindAndReplace(std::string tkn, std::string rep);
-        
+        void FindAndReplace(Nstr tkn, Nstr rep);
+        void FindAndReplace(Nstr tkn, std::string rep);
+        void FindAndReplace(std::string tkn, Nstr rep);
     };
     
 } // namespace ncpp

@@ -2,6 +2,7 @@
 
 namespace ncpp
 {
+    // Les constructeurs
     Nint::Nint(std::string Nvalue) {
         std::string tmp;
         for (int i = 0; i < Nvalue.size(); i++){    
@@ -36,7 +37,7 @@ namespace ncpp
     
     }
 
-    Nint::Nint(int Nvalue){
+    Nint::Nint(long long Nvalue){
         std::string tmp;
         std::string SNvalue = std::to_string(Nvalue);
         for (int i = 0; i < SNvalue.size(); i++){    
@@ -52,8 +53,11 @@ namespace ncpp
 
         SizeVar = SNvalue;
     }
+    // Fonction poubelle / déco
 
     Nint::~Nint(){}
+    Etype Nint::GetType(){return type;}
+    size_t Nint::GetSize(){return SizeVar.size();}
 
     // Info retrun
     std::string Nint::GetValue(){
@@ -64,6 +68,7 @@ namespace ncpp
         return varret;
     }
 
+    // SetValues & Co 
     void Nint::SetValue(std::string Nvalue){
         Value.clear();
 
@@ -74,17 +79,89 @@ namespace ncpp
                 tmp.clear();
             }
             tmp += Nvalue[i];
-            
-
         }
         if (!tmp.empty()){
             Value.push_back(stoll(tmp));
         }
         SizeVar = Nvalue;
     }
+    void Nint::SetValue(long long Nvalue){
+        Value.clear();
+        std::string RSvalue = std::to_string(Nvalue);
 
-    Etype Nint::GetType(){return type;}
-    size_t Nint::GetSize(){return SizeVar.size();}
+        std::string tmp;
+        for (int i = 0; i < RSvalue.size(); i++){    
+            if (i > 0 && i % 10 == 0 ){
+                Value.push_back(stoll(tmp));
+                tmp.clear();
+            }
+            tmp += RSvalue[i];
+        }
+        if (!tmp.empty()){
+            Value.push_back(stoll(tmp));
+        }
+        SizeVar = RSvalue;
+    }
+    void Nint::SetValue(Nint Nvalue){
+        Value.clear();
+        std::string RSvalue = Nvalue.GetValue();
+
+        std::string tmp;
+        for (int i = 0; i < RSvalue.size(); i++){    
+            if (i > 0 && i % 10 == 0 ){
+                Value.push_back(stoll(tmp));
+                tmp.clear();
+            }
+            tmp += RSvalue[i];
+        }
+        if (!tmp.empty()){
+            Value.push_back(stoll(tmp));
+        }
+        SizeVar = RSvalue;
+    }
+    void Nint::SetValue(Nstr Nvalue){
+        Value.clear();
+        std::string RSvalue = Nvalue.GetData();
+
+        std::string tmp;
+        for (int i = 0; i < RSvalue.size(); i++){    
+            if (i > 0 && i % 10 == 0 ){
+                Value.push_back(stoll(tmp));
+                tmp.clear();
+            }
+            tmp += RSvalue[i];
+        }
+        if (!tmp.empty()){
+            Value.push_back(stoll(tmp));
+        }
+        SizeVar = RSvalue;
+    }
+    
+
+    // Les Add
+    void Nint::Add(std::string number){
+        long long Rnum = stoll(number);
+        long long last = Value[Value.size() - 1];
+
+        Value[Value.size() - 1] = last + Rnum;
+    }
+    void Nint::Add(long long number){
+        long long last = Value[Value.size() - 1];
+
+        Value[Value.size() - 1] = last + number;
+    }
+    void Nint::Add(Nint number){
+        long long Rnum = stoll(number.GetValue()) % 10000000000;
+        long long last = Value[Value.size() - 1];
+
+        Value[Value.size() - 1] = last + Rnum;
+    }
+    void Nint::Add(Nstr number){
+        long long Rnum = stoll(number.GetData()) % 10000000000;
+        long long last = Value[Value.size() - 1];
+
+        Value[Value.size() - 1] = last + Rnum;
+    }
 
     
 } // namespace ncpp

@@ -37,15 +37,26 @@ namespace ncpp
     // Les Constucteur
         Nint(std::string Nvalue);
         Nint(Nstr Nvalue);
-        Nint(int Nvalue);
+        Nint(long long Nvalue);
         //Nint(Nint Nvalue);
-
         ~Nint();
+
         // Value function
         std::string GetValue();
-        void SetValue(std::string Nvalue);
         Etype GetType();
         size_t GetSize(); 
+
+        // Setvalue et surcharges
+        void SetValue(std::string Nvalue);
+        void SetValue(long long Nvalue);
+        void SetValue(Nint Nvalue);
+        void SetValue(Nstr Nvalue);
+
+        // La fonction Add et ses surcharges
+        void Add(std::string number);
+        void Add(long long number);
+        void Add(Nint number);
+        void Add(Nstr number);
 
     };
 } // namespace ncpp
