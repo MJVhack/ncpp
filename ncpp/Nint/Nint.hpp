@@ -8,7 +8,8 @@
 
 // include interne
 
-#include "../Etype.hpp"
+#include "../Enum/Etype.hpp"
+#include "../Nstr/Nstr.hpp"
 
 
 /*Note importante:
@@ -33,10 +34,12 @@ namespace ncpp
         std::string SizeVar;
 
     public:
-        //Nint(int Nvalue);
+    // Les Constucteur
         Nint(std::string Nvalue);
-        //Nint(ncpp::Nstring Nvalue);
-        // On va commenter ca pour l'instant 
+        Nint(Nstr Nvalue);
+        Nint(int Nvalue);
+        //Nint(Nint Nvalue);
+
         ~Nint();
         // Value function
         std::string GetValue();

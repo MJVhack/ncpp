@@ -16,7 +16,41 @@ namespace ncpp
         }
 
         SizeVar = Nvalue;
+    }
 
+    Nint::Nint(Nstr Nvalue){
+        std::string tmp;
+        std::string DataNValue = Nvalue.GetData();
+        for (int i = 0; i < DataNValue.size(); i++){    
+            if (i > 0 && i % 10 == 0 ){
+                Value.push_back(stoll(tmp));
+                tmp.clear();
+            }
+            tmp += DataNValue[i];
+        }
+        if (!tmp.empty()){
+            Value.push_back(stoll(tmp));
+        }
+
+        SizeVar = DataNValue;
+    
+    }
+
+    Nint::Nint(int Nvalue){
+        std::string tmp;
+        std::string SNvalue = std::to_string(Nvalue);
+        for (int i = 0; i < SNvalue.size(); i++){    
+            if (i > 0 && i % 10 == 0 ){
+                Value.push_back(stoll(tmp));
+                tmp.clear();
+            }
+            tmp += SNvalue[i];
+        }
+        if (!tmp.empty()){
+            Value.push_back(stoll(tmp));
+        }
+
+        SizeVar = SNvalue;
     }
 
     Nint::~Nint(){}

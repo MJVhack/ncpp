@@ -4,7 +4,7 @@
 #include <string>
 
 // include interne
-#include "../Etype.hpp"
+#include "../Enum/Etype.hpp"
 
 namespace ncpp
 {
@@ -24,6 +24,9 @@ namespace ncpp
         size_t GetSize();
 
         void SetData(std::string Ndata);
+
+        void FindAndReplace(std::string tkn, std::string rep);
+        
     };
     
 } // namespace ncpp
