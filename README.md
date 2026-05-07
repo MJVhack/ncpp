@@ -62,7 +62,7 @@ GetType() -> Retourne le type sous forme de Etype (ici NINT)
 
 
 Si vous trouvez un bug notifiez le avec un email:
-```duc.kalipython@gmail.com```
+[duc.kalipython@gmail.com](mailto:duc.kalipython@gmail.com)
 
 
 
