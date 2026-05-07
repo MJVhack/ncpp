@@ -16,43 +16,48 @@ Exemple:
 # Déclaration
 
 Pour Nint, les fonctions actuelles sont :
+```
 std::string GetValue()
 void SetValue(std::string Nvalue)
 size_t GetSize()
 Etype GetType()
+```
 
-Pour Nstr:
+## Pour Nstr:
+```
 std::string GetData()
 void SetData(std::string Ndata)
 size_t GetSize()
 Etype GetType()
 void FindAndReplace(std::string tkn, std::string rep)
+```
 
-Etype:
+## Etype:
+```
 INT,
 NINT,
 CHAR,
 CHAR_P,
 STRING,
 NSTR
-
+```
 # Utilisation
 
 -> [Nstr]:
-
+```
 GetData() -> Retourne la chaine de charactère que l'objet stocke
 SetData(std::string Ndata) -> Remplace la chaine stocker par le nouveau Ndata
 GetSize() -> Donne la longueur de la chaine de charatère stocké
 GetType() -> Retourne le type sous forme de Etype (ici NSTR)
 FindAndReplace(std::string tkn, std::string rep) -> Trouve dans la chaine de charactère {tkn} et le remplace par {rep}
-
+```
 --------------------
-
+```
 -> [Nint]:
 
 GetValue() -> Retourne la valeur stocké
 SetValue(std::string Nvalue) -> Remplace la valeur stocké par Ndata
 GetSize() -> Retourne la longueur du nombre stocké
 GetType() -> Retourne le type sous forme de Etype (ici NINT)
-
+```
 
