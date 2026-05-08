@@ -10,6 +10,8 @@ namespace ncpp
         NSTR,
         FLOAT,
         DOUBLE,
-        NDOUBLE
+        NDOUBLE,
+        BOOL,
+        NBOOL
     };
 } // namespace ncpp

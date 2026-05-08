@@ -15,6 +15,7 @@ et n'est pas fait pour des calculs précis
 
 ## Pour Nint, les fonctions actuelles sont :
 ```
+Nint(std::string Nvalue) // Avec comme surcharge: long long, Nstr
 std::string GetValue()
 void SetValue(std::string Nvalue) // Avec comme surcharge: long long, Nint et Nstr
 size_t GetSize()
@@ -24,6 +25,7 @@ void Add(std::string number) // Avec comme surcharge: long long, Nint et Nstr
 
 ## Pour Nstr:
 ```
+Nstr(std::string Ndata)
 std::string GetData()
 void SetData(std::string Ndata) // Avec comme surcharge: Nstr 
 size_t GetSize()
@@ -33,9 +35,19 @@ void FindAndReplace(std::string tkn, std::string rep) // Avec comme surcharge: N
 
 ## Pour Ndouble:
 ```
+Ndouble(std::string Nvalue) // Avec comme surcharge: double et Nstr
 std::string GetValue()
 void SetValue(std::string Nvalue) // Avec comme surcharge: double, Ndouble et Nstr
 size_t GetSize()
+Etype GetType()
+void Add(std::string number) // Avec comme surcharge: double, Ndouble et Nstr
+```
+
+## Pour Nbool:
+```
+Nbool(std::string Bval) // Avec comme surcharge: bool, Nint, Nstr et Int
+bool GetValue()
+void SetValue(std::string Nvalue) // Avec comme surcharge: bool, Nint, Nstr, Int et Nbool
 Etype GetType()
 void Add(std::string number) // Avec comme surcharge: double, Ndouble et Nstr
 ```
@@ -61,15 +73,34 @@ GetType() -> Retourne le type sous forme de Etype (ici NSTR)
 FindAndReplace(std::string tkn, std::string rep) -> Trouve dans la chaine de charactère {tkn} et le remplace par {rep}
 ```
 --------------------
-```
--> [Nint]:
 
+-> [Nint]:
+```
 GetValue() -> Retourne la valeur stocké
 SetValue(std::string Nvalue) -> Remplace la valeur stocké par Ndata
 GetSize() -> Retourne la longueur du nombre stocké
 GetType() -> Retourne le type sous forme de Etype (ici NINT)
 ```
 
+--------------------
+
+-> [Ndouble]:
+```
+std::string GetValue() -> Retourne le double stocké
+void SetValue(std::string Nvalue) -> Remplace la valeur stocké par celle donné
+size_t GetSize() -> Retourne la taille du nombre stocké
+Etype GetType() -> Retourne le Etype (ici NDOUBLE)
+void Add(std::string number) -> Fait une addition entre la valeur stocké et le terme donné. Le résultat modifie la valeur stocké
+```
+
+--------------------
+
+-> [Nbool]:
+```
+bool GetValue() -> Retourne le bool stocké
+void SetValue(std::string Nvalue) -> Remplace le bool stocké par celui donné
+Etype GetType() -> Retourne le Etype (ici NBOOL) 
+```
 
 
 Si vous trouvez un bug notifiez le avec un email:

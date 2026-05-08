@@ -49,5 +49,7 @@ namespace ncpp
         value = std::stod(Nvalue.GetData());
     }
 
+    
+
 } // namespace ncpp
 
