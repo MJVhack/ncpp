@@ -2,8 +2,10 @@
 
 ncpp est une librairie en C++ qui a pour but premier d'améliorer les anciens type de C/C++.
 Voici les types qui ont eu leurs alternatives:
-  - int 
+  - int/long/long long
   - string 
+  - double/float
+  - bool
 
 Les types secondaires comme long, long long, int64_t, size_t etc.. Ne seront pas tous refait. Certains seront juste compter/fusionner avec d'autre type. 
 
