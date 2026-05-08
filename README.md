@@ -66,7 +66,7 @@ NSTR
 ```
 # Utilisation
 
--> [Nstr]:
+### -> [Nstr]:
 ```
 GetData() -> Retourne la chaine de charactère que l'objet stocke
 SetData(std::string Ndata) -> Remplace la chaine stocker par le nouveau Ndata
@@ -76,7 +76,7 @@ FindAndReplace(std::string tkn, std::string rep) -> Trouve dans la chaine de cha
 ```
 --------------------
 
--> [Nint]:
+### -> [Nint]:
 ```
 GetValue() -> Retourne la valeur stocké
 SetValue(std::string Nvalue) -> Remplace la valeur stocké par Ndata
@@ -86,7 +86,7 @@ GetType() -> Retourne le type sous forme de Etype (ici NINT)
 
 --------------------
 
--> [Ndouble]:
+### -> [Ndouble]:
 ```
 std::string GetValue() -> Retourne le double stocké
 void SetValue(std::string Nvalue) -> Remplace la valeur stocké par celle donné
@@ -97,7 +97,7 @@ void Add(std::string number) -> Fait une addition entre la valeur stocké et le 
 
 --------------------
 
--> [Nbool]:
+### -> [Nbool]:
 ```
 bool GetValue() -> Retourne le bool stocké
 void SetValue(std::string Nvalue) -> Remplace le bool stocké par celui donné
