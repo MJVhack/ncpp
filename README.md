@@ -13,10 +13,10 @@ et n'est pas fait pour des calculs précis
 
 # Déclaration
 
-Pour Nint, les fonctions actuelles sont :
+## Pour Nint, les fonctions actuelles sont :
 ```
 std::string GetValue()
-void SetValue(std::string Nvalue)
+void SetValue(std::string Nvalue) // Avec comme surcharge: long long, Nint et Nstr
 size_t GetSize()
 Etype GetType()
 void Add(std::string number) // Avec comme surcharge: long long, Nint et Nstr
@@ -25,11 +25,21 @@ void Add(std::string number) // Avec comme surcharge: long long, Nint et Nstr
 ## Pour Nstr:
 ```
 std::string GetData()
-void SetData(std::string Ndata)
+void SetData(std::string Ndata) // Avec comme surcharge: Nstr 
 size_t GetSize()
 Etype GetType()
-void FindAndReplace(std::string tkn, std::string rep) // Avce comme surcharge: Nstr
+void FindAndReplace(std::string tkn, std::string rep) // Avec comme surcharge: Nstr
 ```
+
+## Pour Ndouble:
+```
+std::string GetValue()
+void SetValue(std::string Nvalue) // Avec comme surcharge: double, Ndouble et Nstr
+size_t GetSize()
+Etype GetType()
+void Add(std::string number) // Avec comme surcharge: double, Ndouble et Nstr
+```
+
 
 ## Etype:
 ```
@@ -59,6 +69,7 @@ SetValue(std::string Nvalue) -> Remplace la valeur stocké par Ndata
 GetSize() -> Retourne la longueur du nombre stocké
 GetType() -> Retourne le type sous forme de Etype (ici NINT)
 ```
+
 
 
 Si vous trouvez un bug notifiez le avec un email:

@@ -31,7 +31,7 @@ namespace ncpp
     private:
         std::vector<long long> Value;
         const Etype type = Etype::INT;
-        std::string SizeVar;
+        size_t Size;
 
     public:
     // Les Constucteur

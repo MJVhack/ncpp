@@ -16,7 +16,7 @@ namespace ncpp
             Value.push_back(stoll(tmp));
         }
 
-        SizeVar = Nvalue;
+        Size = Nvalue.size();
     }
 
     Nint::Nint(Nstr Nvalue){
@@ -33,7 +33,7 @@ namespace ncpp
             Value.push_back(stoll(tmp));
         }
 
-        SizeVar = DataNValue;
+        Size = DataNValue.size();
     
     }
 
@@ -51,13 +51,13 @@ namespace ncpp
             Value.push_back(stoll(tmp));
         }
 
-        SizeVar = SNvalue;
+        Size = SNvalue.size();
     }
     // Fonction poubelle / déco
 
     Nint::~Nint(){}
     Etype Nint::GetType(){return type;}
-    size_t Nint::GetSize(){return SizeVar.size();}
+    size_t Nint::GetSize(){return Size;}
 
     // Info retrun
     std::string Nint::GetValue(){
@@ -83,7 +83,7 @@ namespace ncpp
         if (!tmp.empty()){
             Value.push_back(stoll(tmp));
         }
-        SizeVar = Nvalue;
+        Size = Nvalue.size();
     }
     void Nint::SetValue(long long Nvalue){
         Value.clear();
@@ -100,7 +100,7 @@ namespace ncpp
         if (!tmp.empty()){
             Value.push_back(stoll(tmp));
         }
-        SizeVar = RSvalue;
+        Size = RSvalue.size();
     }
     void Nint::SetValue(Nint Nvalue){
         Value.clear();
@@ -117,7 +117,7 @@ namespace ncpp
         if (!tmp.empty()){
             Value.push_back(stoll(tmp));
         }
-        SizeVar = RSvalue;
+        Size = RSvalue.size();
     }
     void Nint::SetValue(Nstr Nvalue){
         Value.clear();
@@ -134,7 +134,7 @@ namespace ncpp
         if (!tmp.empty()){
             Value.push_back(stoll(tmp));
         }
-        SizeVar = RSvalue;
+        Size = RSvalue.size();
     }
     
 

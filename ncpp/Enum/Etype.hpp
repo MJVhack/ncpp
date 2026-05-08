@@ -7,6 +7,9 @@ namespace ncpp
         CHAR,
         CHAR_P,
         STRING,
-        NSTR
+        NSTR,
+        FLOAT,
+        DOUBLE,
+        NDOUBLE
     };
-} // namespace ncpp::Etype
+} // namespace ncpp
