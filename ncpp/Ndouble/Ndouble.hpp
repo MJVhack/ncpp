@@ -20,14 +20,14 @@ namespace ncpp
         size_t Size;
     public:
         // Les constructors
-        Ndouble(double Nvalue);
-        Ndouble(std::string Nvalue);
+        Ndouble(const double& Nvalue);
+        Ndouble(const std::string& Nvalue);
         Ndouble(Nstr Navlue);
 
         ~Ndouble();
 
-        void SetValue(std::string Nvalue);
-        void SetValue(double Nvalue);
+        void SetValue(const std::string& Nvalue);
+        void SetValue(const double& Nvalue);
         void SetValue(Ndouble Nvalue);
         void SetValue(Nstr Nvalue);
 
@@ -35,8 +35,8 @@ namespace ncpp
         Etype GetType();
         size_t GetSize();
 
-        void Add(std::string number);
-        void Add(double number);
+        void Add(const std::string& number);
+        void Add(const double& number);
         void Add(Ndouble number);
         void Add(Nstr number);
 

@@ -3,12 +3,12 @@
 
 namespace ncpp
 {
-    Ndouble::Ndouble(double Nvalue){
+    Ndouble::Ndouble(const double& Nvalue){
         value = Nvalue;
         std::string tmp = std::to_string(value);
         Size = tmp.size();
     }
-    Ndouble::Ndouble(std::string Nvalue){
+    Ndouble::Ndouble(const std::string& Nvalue){
         value = std::stod(Nvalue);
     }
     Ndouble::Ndouble(Nstr Nvalue){
@@ -22,10 +22,10 @@ namespace ncpp
 
     // Add
 
-    void Ndouble::Add(std::string number){
+    void Ndouble::Add(const std::string& number){
         value += std::stod(number);
     }
-    void Ndouble::Add(double number){
+    void Ndouble::Add(const double& number){
         value += number;
     }
     void Ndouble::Add(Ndouble number){
@@ -36,10 +36,10 @@ namespace ncpp
     }
 
     // SetValue
-    void Ndouble::SetValue(std::string Nvalue){
+    void Ndouble::SetValue(const std::string& Nvalue){
         value = std::stod(Nvalue); 
     }
-    void Ndouble::SetValue(double Nvalue){
+    void Ndouble::SetValue(const double& Nvalue){
         value = Nvalue;
     }
     void Ndouble::SetValue(Ndouble Nvalue){

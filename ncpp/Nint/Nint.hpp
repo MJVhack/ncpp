@@ -35,9 +35,9 @@ namespace ncpp
 
     public:
     // Les Constucteur
-        Nint(std::string Nvalue);
+        Nint(const std::string& Nvalue);
         Nint(Nstr Nvalue);
-        Nint(long long Nvalue);
+        Nint(const long long& Nvalue);
         //Nint(Nint Nvalue);
         ~Nint();
 
@@ -47,14 +47,14 @@ namespace ncpp
         size_t GetSize(); 
 
         // Setvalue et surcharges
-        void SetValue(std::string Nvalue);
-        void SetValue(long long Nvalue);
+        void SetValue(const std::string& Nvalue);
+        void SetValue(const long long& Nvalue);
         void SetValue(Nint Nvalue);
         void SetValue(Nstr Nvalue);
 
         // La fonction Add et ses surcharges
-        void Add(std::string number);
-        void Add(long long number);
+        void Add(const std::string& number);
+        void Add(const long long& number);
         void Add(Nint number);
         void Add(Nstr number);
 

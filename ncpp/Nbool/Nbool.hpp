@@ -22,14 +22,14 @@ namespace ncpp
         bool boolean;
         Etype type = Etype::NBOOL;
 
-        std::string mtolower(std::string Pstr);
+        std::string mtolower(const std::string& Pstr);
     public:
     // 5 surcharge aled 😭 (j'ai du copier-coller cette emoji)
-        Nbool(Nstr Bval);
-        Nbool(Nint Bval);
-        Nbool(std::string Bval);
-        Nbool(bool Bval);
-        Nbool(int Bval);
+        Nbool(Nstr& Bval);
+        Nbool(Nint& Bval);
+        Nbool(const std::string& Bval);
+        Nbool(const bool& Bval);
+        Nbool(const int& Bval);
         ~Nbool();
 
 
@@ -40,9 +40,9 @@ namespace ncpp
         void SetBool(Nbool Bval);
         void SetBool(Nstr Bval);
         void SetBool(Nint Bval);
-        void SetBool(std::string Bval);
-        void SetBool(bool Bval);
-        void SetBool(int Bval);
+        void SetBool(const std::string& Bval);
+        void SetBool(const bool& Bval);
+        void SetBool(const int& Bval);
         
     };
     

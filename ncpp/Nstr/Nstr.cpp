@@ -2,7 +2,7 @@
 
 namespace ncpp
 {
-    Nstr::Nstr(std::string Ndata){data = Ndata;}
+    Nstr::Nstr(const std::string& Ndata){data = Ndata;}
     Nstr::~Nstr(){}
 
     std::string Nstr::GetData(){return data;}
@@ -10,10 +10,10 @@ namespace ncpp
     size_t Nstr::GetSize(){return data.size();}
 
     // SetData
-    void Nstr::SetData(std::string Ndata){data = Ndata;}
+    void Nstr::SetData(const std::string& Ndata){data = Ndata;}
     void Nstr::SetData(Nstr Ndata){data = Ndata.GetData();}
 
-    void Nstr::FindAndReplace(std::string tkn, std::string rep){
+    void Nstr::FindAndReplace(const std::string& tkn, const std::string& rep){
         size_t pos = data.find(tkn);
         while (pos != std::string::npos){
             data.replace(pos, tkn.size(), rep);
@@ -28,7 +28,7 @@ namespace ncpp
             pos = data.find(Rtkn);
         }
     }
-    void Nstr::FindAndReplace(Nstr tkn, std::string rep){
+    void Nstr::FindAndReplace(Nstr tkn, const std::string& rep){
         std::string Rtkn = tkn.GetData();
         size_t pos = data.find(Rtkn);
         while (pos != std::string::npos){
@@ -36,7 +36,7 @@ namespace ncpp
             pos = data.find(Rtkn);
         }
     }
-    void Nstr::FindAndReplace(std::string tkn, Nstr rep){
+    void Nstr::FindAndReplace(const std::string& tkn, Nstr rep){
         size_t pos = data.find(tkn);
         while (pos != std::string::npos){
             data.replace(pos, tkn.size(), rep.GetData());

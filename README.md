@@ -17,7 +17,7 @@ et n'est pas fait pour des calculs précis
 
 ## Pour Nint, les fonctions actuelles sont :
 ```
-Nint(std::string Nvalue) // Avec comme surcharge: long long, Nstr
+Nint(const std::string& Nvalue) // Avec comme surcharge: long long, Nstr
 std::string GetValue()
 void SetValue(std::string Nvalue) // Avec comme surcharge: long long, Nint et Nstr
 size_t GetSize()
@@ -27,7 +27,7 @@ void Add(std::string number) // Avec comme surcharge: long long, Nint et Nstr
 
 ## Pour Nstr:
 ```
-Nstr(std::string Ndata)
+Nstr(const std::string& Ndata)
 std::string GetData()
 void SetData(std::string Ndata) // Avec comme surcharge: Nstr 
 size_t GetSize()
@@ -37,7 +37,7 @@ void FindAndReplace(std::string tkn, std::string rep) // Avec comme surcharge: N
 
 ## Pour Ndouble:
 ```
-Ndouble(std::string Nvalue) // Avec comme surcharge: double et Nstr
+Ndouble(const std::string& Nvalue) // Avec comme surcharge: double et Nstr
 std::string GetValue()
 void SetValue(std::string Nvalue) // Avec comme surcharge: double, Ndouble et Nstr
 size_t GetSize()
@@ -47,7 +47,7 @@ void Add(std::string number) // Avec comme surcharge: double, Ndouble et Nstr
 
 ## Pour Nbool:
 ```
-Nbool(std::string Bval) // Avec comme surcharge: bool, Nint, Nstr et Int
+Nbool(const std::string& Bval) // Avec comme surcharge: bool, Nint, Nstr et Int
 bool GetValue()
 void SetValue(std::string Nvalue) // Avec comme surcharge: bool, Nint, Nstr, Int et Nbool
 Etype GetType()
@@ -68,20 +68,20 @@ NSTR
 
 ### -> [Nstr]:
 ```
-GetData() -> Retourne la chaine de charactère que l'objet stocke
-SetData(std::string Ndata) -> Remplace la chaine stocker par le nouveau Ndata
-GetSize() -> Donne la longueur de la chaine de charatère stocké
-GetType() -> Retourne le type sous forme de Etype (ici NSTR)
-FindAndReplace(std::string tkn, std::string rep) -> Trouve dans la chaine de charactère {tkn} et le remplace par {rep}
+std::string GetData() -> Retourne la chaine de charactère que l'objet stocke
+void SetData(std::string Ndata) -> Remplace la chaine stocker par le nouveau Ndata
+size_t GetSize() -> Donne la longueur de la chaine de charatère stocké
+Etype GetType() -> Retourne le type sous forme de Etype (ici NSTR)
+void FindAndReplace(std::string tkn, std::string rep) -> Trouve dans la chaine de charactère {tkn} et le remplace par {rep}
 ```
 --------------------
 
 ### -> [Nint]:
 ```
-GetValue() -> Retourne la valeur stocké
-SetValue(std::string Nvalue) -> Remplace la valeur stocké par Ndata
-GetSize() -> Retourne la longueur du nombre stocké
-GetType() -> Retourne le type sous forme de Etype (ici NINT)
+std::string GetValue() -> Retourne la valeur stocké
+void SetValue(std::string Nvalue) -> Remplace la valeur stocké par Ndata
+size_t GetSize() -> Retourne la longueur du nombre stocké
+Etype GetType() -> Retourne le type sous forme de Etype (ici NINT)
 ```
 
 --------------------

@@ -3,7 +3,7 @@
 namespace ncpp
 {
 
-    std::string Nbool::mtolower(std::string Pstr){
+    std::string Nbool::mtolower(const std::string& Pstr){
         std::string varret;
         for (int i = 0; i < Pstr.size(); i++){
             varret = tolower(Pstr[i]);
@@ -16,7 +16,7 @@ namespace ncpp
 
 
 
-    Nbool::Nbool(Nstr Bval){
+    Nbool::Nbool(Nstr& Bval){
         std::string RBval = Bval.GetData();
         RBval = mtolower(RBval);
         if (RBval == "true"){
@@ -26,7 +26,7 @@ namespace ncpp
             boolean = false;
         }
     }
-    Nbool::Nbool(Nint Bval){
+    Nbool::Nbool(Nint& Bval){
         if (stoi(Bval.GetValue()) == 0){
             boolean = false;
         }
@@ -34,7 +34,7 @@ namespace ncpp
             boolean = true;
         }
     }
-    Nbool::Nbool(std::string Bval){
+    Nbool::Nbool(const std::string& Bval){
         if (stoi(Bval) == 0){
             boolean = false;
         }
@@ -42,8 +42,8 @@ namespace ncpp
             boolean = true;
         }
     }
-    Nbool::Nbool(bool Bval){boolean = Bval;}
-    Nbool::Nbool(int Bval){
+    Nbool::Nbool(const bool& Bval){boolean = Bval;}
+    Nbool::Nbool(const int& Bval){
         if (Bval == 0){
             boolean = false;
         }
@@ -74,7 +74,7 @@ namespace ncpp
             boolean = true;
         }
     }
-    void Nbool::SetBool(std::string Bval){
+    void Nbool::SetBool(const std::string& Bval){
         if (stoi(Bval) == 0){
             boolean = false;
         }
@@ -82,8 +82,8 @@ namespace ncpp
             boolean = true;
         }
     }
-    void Nbool::SetBool(bool Bval){boolean = Bval;}
-    void Nbool::SetBool(int Bval){
+    void Nbool::SetBool(const bool& Bval){boolean = Bval;}
+    void Nbool::SetBool(const int& Bval){
         if (Bval == 0){
             boolean = false;
         }

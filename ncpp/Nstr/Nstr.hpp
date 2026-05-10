@@ -15,7 +15,7 @@ namespace ncpp
         const Etype type = Etype::NSTR;
 
     public:
-        Nstr(std::string Ndata);
+        Nstr(const std::string& Ndata);
         ~Nstr();
 
         // Info
@@ -24,14 +24,14 @@ namespace ncpp
         size_t GetSize();
 
         // Setdata & co
-        void SetData(std::string Ndata);
+        void SetData(const std::string& Ndata);
         void SetData(Nstr Ndata);
 
         // FindAndReplace And ALLLL
-        void FindAndReplace(std::string tkn, std::string rep);
+        void FindAndReplace(const std::string& tkn, const std::string& rep);
         void FindAndReplace(Nstr tkn, Nstr rep);
-        void FindAndReplace(Nstr tkn, std::string rep);
-        void FindAndReplace(std::string tkn, Nstr rep);
+        void FindAndReplace(Nstr tkn, const std::string& rep);
+        void FindAndReplace(const std::string& tkn, Nstr rep);
     };
     
 } // namespace ncpp

@@ -3,7 +3,7 @@
 namespace ncpp
 {
     // Les constructeurs
-    Nint::Nint(std::string Nvalue) {
+    Nint::Nint(const std::string& Nvalue) {
         std::string tmp;
         for (int i = 0; i < Nvalue.size(); i++){    
             if (i > 0 && i % 10 == 0 ){
@@ -37,7 +37,7 @@ namespace ncpp
     
     }
 
-    Nint::Nint(long long Nvalue){
+    Nint::Nint(const long long& Nvalue){
         std::string tmp;
         std::string SNvalue = std::to_string(Nvalue);
         for (int i = 0; i < SNvalue.size(); i++){    
@@ -69,7 +69,7 @@ namespace ncpp
     }
 
     // SetValues & Co 
-    void Nint::SetValue(std::string Nvalue){
+    void Nint::SetValue(const std::string& Nvalue){
         Value.clear();
 
         std::string tmp;
@@ -85,7 +85,7 @@ namespace ncpp
         }
         Size = Nvalue.size();
     }
-    void Nint::SetValue(long long Nvalue){
+    void Nint::SetValue(const long long& Nvalue){
         Value.clear();
         std::string RSvalue = std::to_string(Nvalue);
 
@@ -139,13 +139,13 @@ namespace ncpp
     
 
     // Les Add
-    void Nint::Add(std::string number){
+    void Nint::Add(const std::string& number){
         long long Rnum = stoll(number);
         long long last = Value[Value.size() - 1];
 
         Value[Value.size() - 1] = last + Rnum;
     }
-    void Nint::Add(long long number){
+    void Nint::Add(const long long& number){
         long long last = Value[Value.size() - 1];
 
         Value[Value.size() - 1] = last + number;
