@@ -69,7 +69,7 @@ NSTR
 ### -> [Nstr]:
 ```
 std::string GetData() -> Retourne la chaine de charactère que l'objet stocke
-void SetData(std::string Ndata) -> Remplace la chaine stocker par le nouveau Ndata
+void SetData(const std::string& Ndata) -> Remplace la chaine stocker par le nouveau Ndata
 size_t GetSize() -> Donne la longueur de la chaine de charatère stocké
 Etype GetType() -> Retourne le type sous forme de Etype (ici NSTR)
 void FindAndReplace(std::string tkn, std::string rep) -> Trouve dans la chaine de charactère {tkn} et le remplace par {rep}
@@ -79,7 +79,7 @@ void FindAndReplace(std::string tkn, std::string rep) -> Trouve dans la chaine d
 ### -> [Nint]:
 ```
 std::string GetValue() -> Retourne la valeur stocké
-void SetValue(std::string Nvalue) -> Remplace la valeur stocké par Ndata
+void SetValue(const std::string& Nvalue) -> Remplace la valeur stocké par Ndata
 size_t GetSize() -> Retourne la longueur du nombre stocké
 Etype GetType() -> Retourne le type sous forme de Etype (ici NINT)
 ```
@@ -89,7 +89,7 @@ Etype GetType() -> Retourne le type sous forme de Etype (ici NINT)
 ### -> [Ndouble]:
 ```
 std::string GetValue() -> Retourne le double stocké
-void SetValue(std::string Nvalue) -> Remplace la valeur stocké par celle donné
+void SetValue(const std::string& Nvalue) -> Remplace la valeur stocké par celle donné
 size_t GetSize() -> Retourne la taille du nombre stocké
 Etype GetType() -> Retourne le Etype (ici NDOUBLE)
 void Add(std::string number) -> Fait une addition entre la valeur stocké et le terme donné. Le résultat modifie la valeur stocké
@@ -100,7 +100,7 @@ void Add(std::string number) -> Fait une addition entre la valeur stocké et le 
 ### -> [Nbool]:
 ```
 bool GetValue() -> Retourne le bool stocké
-void SetValue(std::string Nvalue) -> Remplace le bool stocké par celui donné
+void SetValue(const std::string& Nvalue) -> Remplace le bool stocké par celui donné
 Etype GetType() -> Retourne le Etype (ici NBOOL) 
 ```
 
