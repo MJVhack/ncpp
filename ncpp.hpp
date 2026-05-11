@@ -1,9 +1,10 @@
 #pragma once
 
-#include "Nint/Nint.hpp"
-#include "Nstr/Nstr.hpp"
-#include "Ndouble/Ndouble.hpp"
-#include "Nbool/Nbool.hpp"
+#include "ncpp/Nint/Nint.hpp"
+#include "ncpp/Nstr/Nstr.hpp"
+#include "ncpp/Ndouble/Ndouble.hpp"
+#include "ncpp/Nbool/Nbool.hpp"
+#include "ncpp/Enum/Etype.hpp"
 
 /*
 Author: MJVHack (Evil Diabriek)
